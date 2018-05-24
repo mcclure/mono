@@ -929,6 +929,9 @@ PLATFORM_DISABLED_TESTS += tailcall/3.exe
 PLATFORM_DISABLED_TESTS += tailcall/4.exe
 PLATFORM_DISABLED_TESTS += tailcall/8273.exe
 PLATFORM_DISABLED_TESTS += tailcall/fsharp-deeptail.exe
+PLATFORM_DISABLED_TESTS += tailcall/coreclr/JIT/Directed/tailcall/tailcall.exe
+PLATFORM_DISABLED_TESTS += tailcall/coreclr/JIT/Methodical/tailcall/test_virt.exe
+PLATFORM_DISABLED_TESTS += tailcall/coreclr/JIT/Methodical/nonvirtualcall/tailcall.exe
 PLATFORM_DISABLED_TESTS += tailcall-interface-conservestack.exe
 PLATFORM_DISABLED_TESTS += ivtail1.exe
 PLATFORM_DISABLED_TESTS += appdomain-threadpool-unload.exe
@@ -1198,8 +1201,6 @@ CI_DISABLED_TESTS = \
 # so they don't interfere with other people's work
 CI_PR_DISABLED_TESTS = \
 	appdomain-threadpool-unload.exe \
-	monitor-abort.exe \
-	monitor-wait-abort.exe \
 	process-stress-3.exe
 
 # appdomain-threadpool-unload.exe creates 100 appdomains, takes too long with llvm
@@ -1353,7 +1354,6 @@ INTERP_DISABLED_TESTS += \
 	handleref.exe \
 	monitor-abort.exe \
 	nullable_boxing.2.exe \
-	pinvoke.exe \
 	pinvoke2.exe \
 	pinvoke3.exe \
 	remoting2.exe \
@@ -1390,7 +1390,6 @@ INTERP_DISABLED_TESTS += \
 	cominterop.exe \
 	delegate-with-null-target.exe \
 	dim-diamondshape.exe \
-	pinvoke.exe \
 	pinvoke3.exe
 endif
 
